@@ -14,8 +14,8 @@
 		86C72841208AF44F006A5136 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86C72840208AF44F006A5136 /* Assets.xcassets */; };
 		86C72844208AF44F006A5136 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86C72842208AF44F006A5136 /* LaunchScreen.storyboard */; };
 		86C7284F208AF44F006A5136 /* Video_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7284E208AF44F006A5136 /* Video_SearchTests.swift */; };
-		86C7285A208AF511006A5136 /* UserLogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C72859208AF511006A5136 /* UserLogIn.swift */; };
 		86C7285C208AF559006A5136 /* VideoSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7285B208AF559006A5136 /* VideoSearch.swift */; };
+		86C72860208AFBC6006A5136 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C7285F208AFBC6006A5136 /* UserLogin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,8 @@
 		86C7284A208AF44F006A5136 /* Video SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Video SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86C7284E208AF44F006A5136 /* Video_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video_SearchTests.swift; sourceTree = "<group>"; };
 		86C72850208AF44F006A5136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86C72859208AF511006A5136 /* UserLogIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogIn.swift; sourceTree = "<group>"; };
 		86C7285B208AF559006A5136 /* VideoSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoSearch.swift; sourceTree = "<group>"; };
+		86C7285F208AFBC6006A5136 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +90,8 @@
 				86C72842208AF44F006A5136 /* LaunchScreen.storyboard */,
 				86C72845208AF44F006A5136 /* Info.plist */,
 				86C7283D208AF44E006A5136 /* Video_Search.xcdatamodeld */,
-				86C72859208AF511006A5136 /* UserLogIn.swift */,
 				86C7285B208AF559006A5136 /* VideoSearch.swift */,
+				86C7285F208AFBC6006A5136 /* UserLogin.swift */,
 			);
 			path = "Video Search";
 			sourceTree = "<group>";
@@ -207,8 +207,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				86C72839208AF44E006A5136 /* ViewController.swift in Sources */,
+				86C72860208AFBC6006A5136 /* UserLogin.swift in Sources */,
 				86C72837208AF44E006A5136 /* AppDelegate.swift in Sources */,
-				86C7285A208AF511006A5136 /* UserLogIn.swift in Sources */,
 				86C7283F208AF44E006A5136 /* Video_Search.xcdatamodeld in Sources */,
 				86C7285C208AF559006A5136 /* VideoSearch.swift in Sources */,
 			);
