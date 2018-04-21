@@ -1,5 +1,5 @@
 //
-//  UserLogIn.swift
+//  UserLogin.swift
 //  Video Search
 //
 //  Created by Ishan Thapar on 4/21/18.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class UserLogIn: UIViewController {
+class UserLogin: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
