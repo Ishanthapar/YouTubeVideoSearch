@@ -7,6 +7,8 @@ target 'Video Search' do
 
   # Pods for Video Search
   pod 'GoogleSignIn'
+  pod 'Firebase/Core'
+  pod 'GoogleAPIClientForREST/YouTube'
 
   target 'Video SearchTests' do
     inherit! :search_paths

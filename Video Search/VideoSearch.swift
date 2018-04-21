@@ -8,11 +8,13 @@
 
 import UIKit
 import GoogleSignIn
+import GoogleAPIClientForREST
 
 class VideoSearch: UIViewController {
 
     //@IBOutlet weak var signOutButton: UIBarButtonItem!
     @IBOutlet weak var signOutButton: UIButton!
+    private let youtubeService = GTLRYouTubeService.init()
     
     override func viewDidLoad() {
         super.viewDidLoad()

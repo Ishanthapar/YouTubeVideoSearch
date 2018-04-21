@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 import GoogleSignIn
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -37,6 +38,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Override point for customization after application launch.
         GIDSignIn.sharedInstance().clientID = "936563931731-ugmg5c0bo4ju1ossr40bhr99b4vmo979.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        FirebaseApp.configure()
         return true
     }
     
