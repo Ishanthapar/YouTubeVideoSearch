@@ -7,14 +7,26 @@
 //
 
 import UIKit
+import GoogleSignIn
 
 class VideoSearch: UIViewController {
 
+    //@IBOutlet weak var signOutButton: UIBarButtonItem!
+    @IBOutlet weak var signOutButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func logOut(_ sender: Any, forEvent event: UIEvent) {
+        GIDSignIn.sharedInstance().signOut()
+        DispatchQueue.main.async(){
+            [unowned self] in
+            self.performSegue(withIdentifier: "LogOut", sender: self.signOutButton)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import GoogleSignIn
 
-class UserLogin: UIViewController {
+class UserLogin: UIViewController, GIDSignInUIDelegate {
 
+    var googleLoginButton: GIDSignInButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        let googleButtonFrame = CGRect.init(x: 0, y: 0, width: 50, height: 50)
+        googleLoginButton = GIDSignInButton.init(frame: googleButtonFrame)
+        googleLoginButton.center  = self.view.center
+        self.view.addSubview(googleLoginButton)
     }
 
     override func didReceiveMemoryWarning() {

@@ -8,16 +8,40 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+    
     var window: UIWindow?
-
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if error != nil{
+            print("Could not sign in. An error occurred..")
+        }else{
+            let firstName = user.profile.givenName
+            print("You have successfully logged in, \(firstName!).")
+            //let videoSearchController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Video Search")
+            DispatchQueue.main.async {
+                [unowned self] in
+                self.window?.rootViewController?.performSegue(withIdentifier: "VideoSearch", sender: self.window?.rootViewController)
+            }
+        }
+    }
+    
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform actions when user logs out
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GIDSignIn.sharedInstance().clientID = "936563931731-ugmg5c0bo4ju1ossr40bhr99b4vmo979.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = self
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
