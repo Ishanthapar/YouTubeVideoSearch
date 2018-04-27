@@ -23,13 +23,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let firstName = user.profile.givenName
             print("You have successfully logged in, \(firstName!).")
             UserLogin.loggedIn = true
-            //let navigationController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
+            /*let navigationController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
             //self.window?.rootViewController = navigationController
             //self.window?.rootViewController?.present(UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController"), animated: true, completion: nil)
+            self.window?.rootViewController?.addChildViewController(navigationController)
+            navigationController.viewDidLoad()
+            navigationController.viewWillAppear(true)
             DispatchQueue.main.async {
                 [unowned self] in
                 self.window?.rootViewController?.performSegue(withIdentifier: "VideoSearch", sender: UserLogin.self)
-            }
+            }*/
         }
     }
     
