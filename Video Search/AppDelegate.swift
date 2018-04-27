@@ -22,6 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }else{
             let firstName = user.profile.givenName
             print("You have successfully logged in, \(firstName!).")
+            UserLogin.loggedIn = true
+            //let navigationController = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController")
+            //self.window?.rootViewController = navigationController
             //self.window?.rootViewController?.present(UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController"), animated: true, completion: nil)
             DispatchQueue.main.async {
                 [unowned self] in

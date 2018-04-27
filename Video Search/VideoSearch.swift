@@ -107,6 +107,7 @@ class VideoSearch: UIViewController, UISearchBarDelegate, UIScrollViewDelegate, 
     @IBAction func logOut(_ sender: Any, forEvent event: UIEvent) {
         GIDSignIn.sharedInstance().signOut()
         GIDSignIn.sharedInstance().disconnect()
+        UserLogin.loggedIn = false
         DispatchQueue.main.async(){
             [unowned self] in
             self.performSegue(withIdentifier: "LogOut", sender: self.signOutButton)
