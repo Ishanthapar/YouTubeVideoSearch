@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         }else{
             let firstName = user.profile.givenName
             print("You have successfully logged in, \(firstName!).")
-            //let videoSearchController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Video Search")
+            //self.window?.rootViewController?.present(UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NavigationController"), animated: true, completion: nil)
             DispatchQueue.main.async {
                 [unowned self] in
-                self.window?.rootViewController?.performSegue(withIdentifier: "VideoSearch", sender: self.window?.rootViewController)
+                self.window?.rootViewController?.performSegue(withIdentifier: "VideoSearch", sender: UserLogin.self)
             }
         }
     }

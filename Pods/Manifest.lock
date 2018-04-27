@@ -43,11 +43,13 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Firebase/Core
   - GoogleAPIClientForREST/YouTube
   - GoogleSignIn
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -61,6 +63,7 @@ SPEC REPOS:
     - GTMOAuth2
     - GTMSessionFetcher
     - nanopb
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Firebase: 5ec5e863d269d82d66b4bf56856726f8fb8f0fb3
@@ -73,7 +76,8 @@ SPEC CHECKSUMS:
   GTMOAuth2: c77fe325e4acd453837e72d91e3b5f13116857b2
   GTMSessionFetcher: 5fa5b80fd20e439ef5f545fb2cb3ca6c6714caa2
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 256df746423c1ae9498ac65530fd3b7c483a7fbf
+PODFILE CHECKSUM: 9ac5afcd37223f1f32c7ea548d10b96c0d746b83
 
 COCOAPODS: 1.5.0
